@@ -1,9 +1,41 @@
-<h1>productsList</h1>
-<div *ngFor="let product of productsList">
-    <h5>
-        {{product.ProductName}}
-    </h5>
-    <h1 [ngClass]="{'bg-danger': product.AvailablePieces <= 3}">
-        {{product.AvailablePieces}}
-    </h1>
-</div>
+<!-- Start Products Page -->
+<section class="products-page">
+    <div class="container">
+        <!-- Start Page Header -->
+        <div class="page-header">
+            <header>
+                <h3>
+                    products List
+                </h3>
+            </header>
+        </div>
+        <!-- End Page Header -->
+        <!-- Start Page Content -->
+        <div class="page-content">
+            <article>
+                <div class="row">
+                    <!-- Start Product Item -->
+                    <div class="col-lg-4 col-sm-6 my-3" *ngFor="let product of productsList">
+                        <div class="card">
+                            <div class="card-img">
+                                <img [src]="product.ProductImg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h4>{{product.ProductName}}</h4>
+                                <p class="card-text">
+                                    Price: {{product.ProductPrice}} $
+                                </p>
+                            </div>
+                            <div class="pieces" [ngClass]="{'bg-danger': product.AvailablePieces <= 3}">
+                                Available: {{product.AvailablePieces}}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Product Item -->
+                </div>
+            </article>
+        </div>
+        <!-- End Page Content -->
+    </div>
+</section>
+<!-- End Products Page -->
