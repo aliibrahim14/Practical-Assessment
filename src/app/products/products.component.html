@@ -1,1 +1,9 @@
-<p>products works!</p>
+<h1>productsList</h1>
+<div *ngFor="let product of productsList">
+    <h5>
+        {{product.ProductName}}
+    </h5>
+    <h1 [ngClass]="{'bg-danger': product.AvailablePieces <= 3}">
+        {{product.AvailablePieces}}
+    </h1>
+</div>
