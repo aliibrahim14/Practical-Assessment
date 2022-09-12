@@ -1,1 +1,42 @@
-<p>orders works!</p>
+<!-- Start Orders Page -->
+<section class="orders-page">
+    <div class="container">
+        <!-- Start Page Header -->
+        <div class="page-header">
+            <header>
+                <h3>
+                    Orders List
+                </h3>
+            </header>
+        </div>
+        <!-- End Page Header -->
+        <!-- Start Page Content -->
+        <div class="page-content">
+            <article>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Payment Method</th>
+                                <th scope="col">Total Price</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let order of ordersList">
+                                <th scope="row">{{order.OrderId}}</th>
+                                <td>{{order.PaymentType}}</td>
+                                <td>{{order.total}}</td>
+                                <td>
+                                    <a class="btn btn-primary" [routerLink]="['/order-details/', order.OrderId]">Details</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<!-- End Orders Page -->

@@ -1,3 +1,4 @@
+import { OrderDetailsComponent } from './orders/order-details/order-details.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,6 +15,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
     AppComponent,
     ProductsComponent,
     OrdersComponent,
+    OrderDetailsComponent,
     HeaderComponent,
     FooterComponent
   ],

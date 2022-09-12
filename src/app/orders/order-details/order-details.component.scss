@@ -1,5 +1,5 @@
-// Start Orders Page
-.orders-page {
+// Start Products Page
+.product-details-page {
     padding: 4rem 0;
     // Start Page Header
     .page-header {
@@ -12,10 +12,13 @@
     // End Page Header
     // Start Page Content
     .page-content {
-        // Start Product Item
-        
-        // End Product Item
+        margin-top: 3rem;
+        .details-info {
+            ul {
+                li {
+                    line-height: 35px;
+                }
+            }
+        }
     }
-    // End Page Content
 }
-// End Orders Page
